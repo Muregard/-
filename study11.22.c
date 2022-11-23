@@ -25,7 +25,7 @@
 //	char arr2[20] = "########";
 //	strcpy(arr2, arr1);
 //	printf("%s\n", arr2);
-//	//strlen - string length - å­—ç¬¦ä¸²é•¿åº¦æœ‰å…³
+//	//strlen - string length - ×Ö·û´®³¤¶ÈÓĞ¹Ø
 //	return 0;
 //}
 
@@ -38,7 +38,7 @@
 //	return 0;
 //}
 
-//è‡ªå®šä¹‰å‡½æ•°å®ç°æ±‚ä¸¤ä¸ªæ•°çš„æå¤§å€¼
+//×Ô¶¨Òåº¯ÊıÊµÏÖÇóÁ½¸öÊıµÄ¼«´óÖµ
 //int MAX(int x, int y)
 //{
 //	int z = 0;
@@ -57,14 +57,14 @@
 //	int a = 30;
 //	int b = 20;
 //	int max = MAX(a, b);
-//	printf("è¾ƒå¤§å€¼ä¸º%d\n", max);
+//	printf("½Ï´óÖµÎª%d\n", max);
 //	return 0;
 //}
 
-////ä¸èƒ½å®Œæˆäº¤æ¢ä»»åŠ¡
-// å½“å®å‚ä¼ é€’ç»™å½¢å‚æ—¶
-// å½¢å‚å…¶å®æ˜¯å®å‚çš„ä¸€ä»½ä¸´æ—¶æ‹·è´
-// å¯¹å½¢å‚çš„ä¿®æ”¹æ˜¯ä¸ä¼šæ”¹å˜å®å‚çš„
+////²»ÄÜÍê³É½»»»ÈÎÎñ
+// µ±Êµ²Î´«µİ¸øĞÎ²ÎÊ±
+// ĞÎ²ÎÆäÊµÊÇÊµ²ÎµÄÒ»·İÁÙÊ±¿½±´
+// ¶ÔĞÎ²ÎµÄĞŞ¸ÄÊÇ²»»á¸Ä±äÊµ²ÎµÄ
 // 
 //void Swap1(int x, int y)
 //{
@@ -91,7 +91,7 @@
 //	return 0;
 //}
 
-//ç”¨å‡½æ•°åˆ¤æ–­100-200ä¸­çš„ç´ æ•°
+//ÓÃº¯ÊıÅĞ¶Ï100-200ÖĞµÄËØÊı
 //#include<math.h>
 //int is_prime(int m)
 //{
@@ -125,36 +125,164 @@
 //		}
 //		
 //	}
-//	printf("\n100-200ä¸­å­˜åœ¨%dä¸ªç´ æ•°\n", count);
+//	printf("\n100-200ÖĞ´æÔÚ%d¸öËØÊı\n", count);
 //	return 0;
 //}
 
 
-//ç”¨å‡½æ•°åˆ¤æ–­1000-2000å¹´
-int is_leap_year(int x)
-{
-	if ((x%4==0&&x%100!= 0)||x%400==0)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-}
+//ÓÃº¯ÊıÅĞ¶Ï1000-2000Äê
+//int is_leap_year(int x)
+//{
+//	if ((x%4==0&&x%100!= 0)||x%400==0)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//}
+//
+//int main()
+//{
+//	int year = 0;
+//	int count = 0;
+//	for (year = 1000;year <= 2000;year++)
+//	{
+//		if (is_leap_year(year) == 1)
+//		{
+//			printf("%d ", year);
+//			count++;
+//		}
+//	}
+//	printf("\n1000-2000Äê¼äÓĞ%d¸öÈòÄê\n", count);
+//	return 0;
+//}
+
+//#include<string.h>
+//                      //±¾ÖÊÉÏarr1ÊÇÒ»¸öÖ¸Õë
+//int binary_search(int arr1[], int n)
+//{
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);//Ö¸Õë±äÁ¿4¸ö×Ö½Ú/arr1[0]4¸ö×Ö½Ú=1£¬
+//	                                        //µ¼ÖÂ³ÌĞò³ö´í£¬ĞèÒª°Ñsz·ÅÔÚÖ÷³ÌĞòÖĞ
+//	int left = 0;
+//	int right = sz - 1;
+//	while (left <= right)
+//	{
+//		int mid = (left + right) / 2;
+//		if (arr1[mid] < n)
+//		{
+//		left = mid + 1;
+//		}
+//		else if (arr1[mid] > n)
+//		{
+//			right = mid - 1;
+//		}
+//		else
+//		{
+//			return mid;
+//			break;
+//		}
+//	}
+//	if (left > right)
+//	{
+//		return -1;
+//	}
+//
+//}
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int k = 7;
+//	                       //´«µİ¹ıÈ¥arrÊ×ÔªËØµÄµØÖ·
+//	int ret = binary_search(arr, k);
+//	if (ret == -1)
+//	{
+//		printf("ÕÒ²»µ½Ö¸¶¨µÄÊı×Ö\n");
+//	}
+//	else
+//	{
+//		printf("ÕÒµ½ÁË,ÏÂ±êÊÇ£º%d\n",ret);
+//	}
+//	return 0;
+//}
+
+//±¾ÖÊÉÏarr1ÊÇÒ»¸öÖ¸Õë
+//int binary_search(int arr[], int k,int sz)
+//{
+//	int left = 0;
+//	int right = sz - 1;
+//	while (left <= right)
+//	{
+//		int mid = (left + right) / 2;
+//		if (arr[mid] < k)
+//		{
+//			left = mid + 1;
+//		}
+//		else if (arr[mid] > k)
+//		{
+//			right = mid - 1;
+//		}
+//		else
+//		{
+//			return mid;
+//			break;
+//		}
+//	}
+//	if (left > right)
+//	{
+//		return -1;
+//	}
+//
+//}
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int k = 9;
+//	int sz = sizeof(arr) / sizeof(arr[0]);//ÔÚÖ÷º¯ÊıÖĞ¼ÆËãÊı×é³¤¶È
+//	int ret = binary_search(arr, k, sz);//ÔÚº¯ÊıÖĞÌí¼ÓÊı×é³¤¶È±äÁ¿sz
+//	if (ret == -1)
+//	{
+//		printf("ÕÒ²»µ½Ö¸¶¨µÄÊı×Ö\n");
+//	}
+//	else
+//	{
+//		printf("ÕÒµ½ÁË,ÏÂ±êÊÇ£º%d\n", ret);
+//	}
+//	return 0;
+//}
+
+//void Add(int* p)
+//{
+//	(*p)++;//++ÔËËãÓÅÏÈ¼¶¸ß£¬Ó¦¸Ã°Ñ*pÀ¨ÆğÀ´
+//
+//}
+//int main()
+//{
+//	int num = 0;
+//	int i = 0;
+//	for (i = 1;i <= 10;i++)
+//	{
+//		Add(&num);
+//	}
+//	printf("µ÷ÓÃÁË%d´Îº¯Êı\n", num);
+//	return 0;
+//}
+
+//º¯ÊıµÄÇ¶Ì×ºÍÁ´Ê½·ÃÎÊ
+//int main()
+//{
+//	printf("%d", printf("%d", printf("%d", 43)));//printfµÄ·µ»ØÖµÊÇ´òÓ¡µÄ×Ö·ûµÄÊıÁ¿
+//	return 0;
+//}
+
+#include"add.h"
 
 int main()
 {
-	int year = 0;
-	int count = 0;
-	for (year = 1000;year <= 2000;year++)
-	{
-		if (is_leap_year(year) == 1)
-		{
-			printf("%d ", year);
-			count++;
-		}
-	}
-	printf("\n1000-2000å¹´é—´æœ‰%dä¸ªé—°å¹´\n", count);
-	return 0;
+	int a = 10;
+	int b = 20;
+	int sum = 0;
+	sum = Add(a, b);
+	printf("%d\n", sum);
 }
